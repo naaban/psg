@@ -1,0 +1,135 @@
+<!--
+  Generated template for the Page2Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <!-- <ion-navbar color="light">
+    <ion-title>Family Details</ion-title>
+  </ion-navbar> -->
+
+</ion-header>
+
+
+<ion-content >
+
+
+  <!-- <ion-card> </ion-card>  -->
+  <!-- <img style="width: 100%; height: 100%;" src="assets/imgs/par2.jpg"> -->
+  
+  
+  <div class="travelCard -skeleton js-location">
+      <div class="travelCard-container">
+          <div padding style="height: 15%;width: 15%;">
+              <img (click)="back()" src="assets/imgs/arrow.svg">
+           </div>
+        <div width-100  >
+          <img style="  display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 30%;
+          margin-top: 20px" src="assets/imgs/14.jpg">
+        </div> 
+    
+         <ion-card class="car">
+           
+  <ion-card-header  style="text-align: center"> 
+    <div class="tit" style="text-align: center">
+        Family Details
+            </div>
+            <hr>
+  </ion-card-header>
+         <ion-card-content>
+
+            <form class="login100-form validate-form flex-sb flex-w" [formGroup]="params" (ngSubmit)="next()">
+
+            <ion-input  formControlName="spouse" type="text" full placeholder="Enter Spouse Name"> </ion-input><br>
+  
+            <ion-input  formControlName="childno" type="number" full placeholder="Enter No of Childrens"> </ion-input><br>
+
+
+            <!-- <ion-input  formControlName="weddate" type="text" full placeholder="Enter Your Wedding Date"> </ion-input><br> -->
+
+            <ion-item>
+                <ion-label>Wedding Date</ion-label>
+                <ion-datetime  [ngModelOptions]="{standalone: true}" displayFormat="MM/DD/YYYY"  max="{{year}}" [(ngModel)]="weddate"></ion-datetime>
+              </ion-item>
+              <br>
+              <hr>
+
+            <ion-row>
+              <ion-col col-6>
+                <ion-row>
+                <div class="titt"> College Photos</div>
+              </ion-row>
+                <ion-row>
+                <ion-card (click)="clgPhoto(0)" style="width: 80px; height: 80px;text-align:left;">
+                  <!-- <br> -->
+                  <img style="width: 100%; height: 80px;" src={{clgPhto}} for [hidden]="!hideClg" >
+                  </ion-card>
+                </ion-row>
+              </ion-col>
+              <ion-col col-6>
+                  <ion-row>
+                  <div class="titt"> Family Photos</div>
+                </ion-row>
+                  <ion-row>
+                  <ion-card (click)="fmlyPhoto(0)" style="width: 80px; height: 80px;text-align:left;">
+                    <!-- <br> -->
+                    <img style="width: 100%; height: 80px;"  src={{fmlyPhto}} for [hidden]="!hideBtn" >
+                    </ion-card>
+                  </ion-row>
+                </ion-col>
+            </ion-row>
+            <hr>
+            <ion-row>
+              <ion-col col-3>
+               
+              </ion-col>
+              <ion-col col-6>
+                  <ion-row>
+                  <div class="titt"> Individual Photos</div>
+                </ion-row>
+                  <ion-row>
+                  <ion-card (click)="indi(0)" style="width: 80px; height: 80px;text-align:left;">
+                    <!-- <br> -->
+                    <img style="width: 100%; height: 80px;"  src={{ind}} for [hidden]="!hidein" >
+                    </ion-card>
+                  </ion-row>
+                </ion-col>
+                <ion-col col-3>
+               
+                </ion-col>
+            </ion-row>
+            <hr>
+
+            <br>
+            <ion-card-header  style="text-align: center"> 
+                <div class="tit" style="text-align: center">
+                    Working Details
+                        </div>
+                        <hr>
+              </ion-card-header>
+            <ion-input  formControlName="occupation" type="text" full placeholder="Occupation"> </ion-input><br>
+            <ion-input  formControlName="company" type="text" full placeholder="Company"> </ion-input><br>
+            <ion-input  formControlName="position" type="text" full placeholder="Current Position"> </ion-input><br>
+            <!-- <ion-input  type="text" full placeholder="Enter date"> </ion-input><br> -->
+        
+  
+  <br><br>
+  <div  style="text-align: center">
+  <button  ion-button      >NEXT</button>
+  </div>
+              </form>
+  
+         </ion-card-content>
+        </ion-card>
+        
+      </div>
+    </div>
+  
+  
+  </ion-content>
+  

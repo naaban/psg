@@ -1,0 +1,126 @@
+<!-- <ion-header >
+  <ion-navbar color="light">
+    <button ion-button menuToggle>
+      <ion-icon name="arrow-back"></ion-icon>
+    </button>
+    <ion-title>Travel Details</ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content >
+
+
+<!-- <ion-card> </ion-card>  -->
+<!-- <img style="width: 100%; height: 100%;" src="assets/imgs/par2.jpg"> -->
+
+
+<div class="travelCard -skeleton js-location">
+    <div class="travelCard-container" >
+        <div padding style="height: 15%;width: 15%;">
+            <img (click)="back()" src="assets/imgs/arrow.svg">
+         </div>
+      <div width-100  >
+        <img style="  display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        margin-top: 20px" src="assets/imgs/14.jpg">
+      </div>  
+  <!-- <div style="margin-top:40%"> -->
+      <ion-card>
+        <br> <br>
+        <ion-card-header>  
+            <div class="tit" style="text-align: center">
+                Travel Details
+                    </div><hr>
+   </ion-card-header>
+   <br>
+   <ion-card-content>
+      <!-- <form class="login100-form validate-form flex-sb flex-w" [formGroup]="params" (ngSubmit)="next()"> -->
+
+      <!-- <div class="titt" style="text-align: left">Mode Of Travel</div><br> -->
+
+
+      <!-- <ion-input formControlName="modetravel"  type="text" full placeholder=""> </ion-input> -->
+      
+      <ion-item class="ite"  style="text-align:center">
+          <ion-label style="text-align: left">Mode Of Travel</ion-label>
+          <!-- <div style="text-align:center"> -->
+          <ion-select  [ngModelOptions]="{standalone: true}" [(ngModel)]="modetravel" >
+            <ion-option >Bus</ion-option>
+            <ion-option >Train</ion-option>
+            <ion-option >Flight</ion-option>
+            
+          </ion-select>
+        <!-- </div> -->
+        </ion-item><br>
+      
+      
+      <br><br>
+     
+     
+      <div class="titt" style="text-align: left">Destination Arraival</div><br>
+<ion-row>
+ 
+  <ion-col col-7>
+
+
+     <ion-item style="text-align:right">
+        <ion-label style="text-align:right">Date</ion-label>
+        <ion-datetime  [ngModelOptions]="{standalone: true}" displayFormat="MM/DD/YYYY"  max="{{year}}" [(ngModel)]="dateDA"></ion-datetime>
+      </ion-item>
+    </ion-col>
+  
+  
+  
+     <ion-col col-5>
+       
+        <ion-item >
+            <ion-label >Time</ion-label>
+            <ion-datetime [ngModelOptions]="{standalone: true}" displayFormat="H:m" [(ngModel)]="timeDA"></ion-datetime>
+          </ion-item>
+    </ion-col>
+</ion-row>
+<br>
+<div class="titt" style="text-align: left">Departure</div><br>
+<ion-row>
+ 
+    <ion-col col-7>
+  
+  
+      <ion-item style="text-align:right">
+        <ion-label style="text-align:right">Date</ion-label>
+          <ion-datetime [ngModelOptions]="{standalone: true}" displayFormat="MM/DD/YYYY"  max="{{year}}" [(ngModel)]="dateD"></ion-datetime>
+        </ion-item>
+      </ion-col>
+    
+    
+    
+       <ion-col col-5>
+         
+          <ion-item>
+              <ion-label>Time</ion-label>
+              <ion-datetime [ngModelOptions]="{standalone: true}" displayFormat="H:m"  [(ngModel)]="timeD"></ion-datetime>
+            </ion-item>
+      </ion-col>
+  </ion-row>
+<br><br>
+<br><br>
+<br>
+<div  style="text-align: center">
+    <button  ion-button (click)="next()"    >NEXT</button>
+    </div>
+            <!-- </form>  -->
+
+   </ion-card-content>
+      
+        </ion-card>
+       
+      </div>
+      
+   
+    <!-- </div> -->
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,181 @@
+<!-- <ion-header >
+  <ion-navbar color="light">
+    <button ion-button menuToggle>
+      <ion-icon name="arrow-back"></ion-icon>
+    </button>
+    <ion-title>Event</ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content >
+
+
+<!-- <ion-card> </ion-card>  -->
+<!-- <img style="width: 100%; height: 100%;" src="assets/imgs/par2.jpg"> -->
+
+
+<div class="travelCard -skeleton js-location">
+
+    <div class="travelCard-container">
+     
+ 
+ <div width-100  >
+    <div padding style="height: 15%;width: 15%;">
+        <img menuToggle src="assets/imgs/arrow.svg">
+     </div>
+  <img style="  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  margin-top: 20px" src="assets/imgs/14.jpg">
+</div> 
+      <ion-card>
+          <br> <br>
+        <ion-card-header>  
+          <div class="tit" style="text-align:center; " >
+      Event Itinerary
+    </div>
+   </ion-card-header>
+   <ion-card-content>
+
+     <div class="day" style="font-weight: bold;"><p style="text-align:center; font-size:15px; font-weight:bold;">Day 1</p></div>
+    <ion-row>
+     <ion-grid >
+        <ion-row class="ro"  >
+            <!-- *ngFor="let res of response.day1" -->
+
+          <ion-col col-4>
+           Time
+          </ion-col>
+          <ion-col col-4>
+          Event
+          </ion-col>
+          <ion-col col-4>
+            Venue
+          </ion-col>
+        </ion-row>
+         <ion-row *ngFor="let res of response.day1">
+            <ion-col col-4>
+              {{res.event_time}}
+          </ion-col>
+          <ion-col col-4>
+            {{res.event_name}}
+          </ion-col>
+          <ion-col col-4>
+              {{res.event_venue}}
+          </ion-col>
+        </ion-row>
+        <!-- <ion-row>
+            <ion-col >
+              1 of 3
+            </ion-col>
+            <ion-col>
+              2 of 3
+            </ion-col>
+            <ion-col>
+              3 of 3
+            </ion-col>
+          </ion-row> -->
+      </ion-grid>
+    </ion-row> 
+<br>
+<div class="day" style="font-weight: bold;"><p style="text-align:center; font-size:15px; font-weight:bold;">Day 2</p></div>
+    <ion-row>
+     <ion-grid >
+      
+        <ion-row class="ro">
+            <ion-col col-4>
+                 Time
+                </ion-col>
+                <ion-col col-4>
+                Event
+                </ion-col>
+                <ion-col col-4>
+              Venue
+                </ion-col>
+              </ion-row>
+
+              <ion-row *ngFor="let res of response.day2">
+                  <ion-col col-4>
+                      {{res.event_time}}
+                  </ion-col>
+                  <ion-col col-4>
+                    {{res.event_name}}
+                  </ion-col>
+                  <ion-col col-4>
+                      {{res.event_venue}}
+                  </ion-col>
+                </ion-row>
+        <!-- <ion-row>
+            <ion-col >
+            
+            </ion-col>
+            <ion-col>
+              2 of 3
+            </ion-col>
+            <ion-col>
+              3 of 3
+            </ion-col>
+          </ion-row> -->
+      </ion-grid>
+    </ion-row> 
+    <br>
+    <div class="day" style="font-weight: bold;"><p style="text-align:center; font-size:15px; font-weight:bold;">Day 3</p></div>
+    <ion-row>
+     <ion-grid >
+        <ion-row class="ro">
+            <ion-col col-4>
+             Time
+            </ion-col>
+            <ion-col col-4>
+            Event
+            </ion-col>
+            <ion-col col-4>
+              Venue
+            </ion-col>
+          </ion-row>
+          <ion-row *ngFor="let res of response.day3">
+              <ion-col col-4>
+                  {{res.event_time}}
+              </ion-col>
+              <ion-col col-4>
+                {{res.event_name}}
+              </ion-col>
+              <ion-col col-4>
+                  {{res.event_venue}}
+              </ion-col>
+            </ion-row>
+        <!-- <ion-row>
+            <ion-col >
+              1 of 3
+            </ion-col>
+            <ion-col>
+              2 of 3
+            </ion-col>
+            <ion-col>
+              3 of 3
+            </ion-col>
+          </ion-row> -->
+      </ion-grid>
+    </ion-row> 
+
+
+
+     
+      
+<br><br>
+<div class="footer" style="text-align:center; "><button (click)="button()" ion-button  >Next</button></div>
+
+
+   </ion-card-content>
+      
+        </ion-card>
+       
+      </div>
+      
+   
+    </div>
+
+
+
+</ion-content>

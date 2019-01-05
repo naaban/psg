@@ -1,0 +1,61 @@
+<ion-menu [content]="content" class="my-container" >
+
+   
+  <ion-header>
+    <!-- <ion-toolbar color="light">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar> -->
+  </ion-header>
+
+  <ion-content  style="background-image:url('assets/imgs/par1.jpg')">
+
+
+
+    
+   <br>
+
+    <!-- <div>
+      <ion-item color="light" *ngFor="let p of pages" (click)="openPage(p)">
+          {{p.title}}
+      </ion-item>>
+    </div> -->
+    <div  color="light" class="car" >
+  <div style="text-align:center;">
+
+
+        <img style="width: 100px; height: 100px; " src="assets/imgs/14.jpg">
+        <br> 
+      </div>
+<!-- <ion-col col-></ion-col> -->
+<!-- <ion-col col-4>
+    <div style="text-align:justify ; background: transparent;margin-top: 10px;margin-bottom: 10px; margin-left: 30px;" color="light"  *ngFor="let p of pages" (click)="openPage(p)" menuClose ion-list >
+ {{p.name}}">
+  </div>
+</ion-col> -->
+<ion-row>
+    <!-- <ion-col col-1></ion-col> -->
+<ion-col col-10 >
+  <ion-row> 
+      
+      <div style="text-align:left ;font-size: 20px; background: transparent;margin-top: 10px;margin-bottom: 10px; margin-left: 30px;" color="light"  *ngFor="let p of pages" (click)="openPage(p)" menuClose ion-list >
+          <img style="width:25px" src="{{p.name}}"> &nbsp;
+        
+          {{p.title}}
+      </div>
+  </ion-row>
+   
+</ion-col>
+<ion-col col-2></ion-col>
+
+      </ion-row><br>
+
+     
+    </div>
+
+
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

@@ -1,0 +1,96 @@
+<!--
+  Generated template for the ChatPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar  color="light">
+    <ion-row>
+    <div padding style="height: 7%;width: 15%;">
+    <img menuToggle src="assets/imgs/arrow.svg">
+ </div>
+ <ion-title>Chat</ion-title>
+</ion-row>
+  </ion-navbar>
+ 
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <!-- <div padding style="height: 7%;width: 15%;">
+        <img menuToggle src="assets/imgs/arrow.svg">
+     </div> -->
+    <!-- <ion-icon  src="assets/imgs/arrow.svg"></ion-icon> -->
+<!-- <ion-card class="ca"> -->
+    <!-- *ngFor="let res of datas.message" -->
+
+
+<ion-card class="cars" *ngFor="let res of datas">
+
+  <ion-row style="text-align:right">
+    <!-- <ion-col col-2></ion-col> -->
+    <!-- <ion-col > </ion-col> -->
+    <div class="ft" >{{res.user_name}}</div>
+  </ion-row>
+
+  <ion-row >
+    <!-- <ion-col col-2></ion-col> -->
+    <!-- <ion-col > </ion-col> -->
+    <p class="fm" padding>{{res.user_message}}</p>
+  </ion-row>
+<!-- <br> -->    
+<ion-row style="text-align:right">
+       <ion-col col-2></ion-col>
+      <ion-col col-10>
+         <div class="ft"> {{res.user_time}} </div>
+        </ion-col>
+</ion-row>
+</ion-card>
+
+
+<!-- </ion-card> -->
+
+
+
+
+
+
+
+<!-- style="margin-top: 130%" -->
+
+
+ 
+
+
+  
+
+
+</ion-content>
+
+<ion-footer >
+    <ion-toolbar  color="light">
+  
+        <ion-card >
+            <form class="login100-form validate-form flex-sb flex-w" [formGroup]="params" (ngSubmit)="send()">
+          <ion-row >
+              <ion-col col-1 ></ion-col>
+              <ion-col  col-8 class="co" style="text-align:center">
+                <ion-input class="input100" type="text" formControlName="message" full placeholder="Write Your Message"> </ion-input>
+              </ion-col>
+              <ion-col col-1 ></ion-col>
+                <ion-col col-2 >
+                    <div style="height: 35px;width: 35px; text-align: right">
+                        <img (click)="send()" src="assets/imgs/plane.svg">
+                     </div>
+                </ion-col>
+              </ion-row>
+              </form>
+            </ion-card>   
+
+
+    </ion-toolbar>
+  </ion-footer>

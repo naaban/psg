@@ -1,0 +1,158 @@
+<!-- <ion-header >
+  <ion-navbar color="light"  style="background: transparent;" >
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content>
+
+
+  <!-- <ion-card> </ion-card>  -->
+
+
+
+  <div class="travelCard -skeleton js-location">
+
+    <div class="travelCard-container" style="background-image:url('assets/imgs/par11.jpeg')">
+
+      <div width-100>
+
+        <img style="  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  margin-top: 20px" src="assets/imgs/14.jpg">
+      </div>
+
+      <ion-card class="car">
+
+        <ion-card-header style="text-align: center">
+          <div class="tit" style="text-align: center">
+            About You
+          </div>
+          <hr>
+        </ion-card-header>
+        <ion-card-content>
+
+          <form [formGroup]="params" (ngSubmit)="next()">
+
+            <ion-input class="input" type="text" formControlName="name" full placeholder="Enter Your Name">
+            </ion-input><br>
+
+            <ion-input type="text" formControlName="email" full placeholder="Enter Your Email">
+            </ion-input><br>
+            <ion-input type="number" formControlName="phone" full placeholder="Enter Your Mobile No">
+            </ion-input><br>
+            <!-- <ion-input class="input100" type="text" formControlName="" full placeholder="Enter Your Dept"> </ion-input><br> -->
+            <ion-input type="text" formControlName="address" full placeholder="Enter Your Address">
+            </ion-input><br>
+            <!-- <ion-input class="input100" type="text" formControlName="achive" full placeholder="Enter Your Achievement"> </ion-input><br> -->
+            <!-- <ion-input class="input100" type="text" full placeholder="Enter date"> </ion-input><br> -->
+            <ion-item class="ite">
+              <ion-label>Click To Choose Dept</ion-label>
+              <ion-select [ngModelOptions]="{standalone: true}" [(ngModel)]="dept">
+                <ion-option *ngFor="let res of datas" value="{{res.dept}}">{{res.dept}}</ion-option>
+             </ion-select>
+            </ion-item>
+
+            <!-- <ion-list>
+              <ion-item>
+                <ion-label color="primary">Select Date</ion-label>
+                <ion-input placeholder="Double Tap To Select Date" [value]="dataInicial | date:'dd/MM/yyyy'" (click)="open()"></ion-input>
+              </ion-item>
+          
+              <ion-item no-lines hidden="true">
+                <ion-datetime #datePicker displayFormat="DD/MM/YYYY" (ionCancel)="this.dataInicial  = null" [(ngModel)]="dataInicial" doneText="Done" cancelText="Cancelar" [max]="maxDate">
+                </ion-datetime>
+              </ion-item>
+            </ion-list> -->
+
+<br>
+            <ion-item>
+              <ion-label>Date of Birth</ion-label>
+              <ion-datetime [ngModelOptions]="{standalone: true}" displayFormat="MM/DD/YYYY" max="{{year}}" [(ngModel)]="date"></ion-datetime>
+
+            </ion-item>
+
+            <br>
+            <!-- <ion-row>
+              <ion-col col-4>
+               
+                <ion-item>
+                  
+                  <ion-datetime placeholder="Month" [ngModelOptions]="{standalone: true}" displayFormat="MM"  [(ngModel)]="month" (ngModelChange)="dateChanged($event)" >
+                  
+                   </ion-datetime>
+                  <ion-select  [ngModelOptions]="{standalone: true}"  [(ngModel)]="month" >
+                      <ion-option value="01">January</ion-option>
+                      <ion-option value="02">February</ion-option>
+                      <ion-option value="03" selected="true">March</ion-option>
+                      <ion-option value="04">April</ion-option>
+                      <ion-option value="05">May</ion-option>
+                      <ion-option value="06">June</ion-option>
+                      <ion-option value="07">July</ion-option>
+                      <ion-option value="08">August</ion-option>
+                      <ion-option value="09">September</ion-option>
+                      <ion-option value="10">October</ion-option>
+                      <ion-option value="11">November</ion-option>
+                      <ion-option value="12">December</ion-option>
+                    </ion-select>
+    
+                </ion-item>
+
+
+                
+              </ion-col>
+              <ion-col col-4>
+                  <ion-label>Date</ion-label>
+                <ion-item>
+                  <ion-label>Date</ion-label>
+                  <ion-datetime placeholder="Date" [ngModelOptions]="{standalone: true}" displayFormat="DD"  [(ngModel)]="date" (ngModelChange)="dateChanged($event)"></ion-datetime>
+    
+                </ion-item>
+              </ion-col>
+              <ion-col col-4>
+                  <ion-label>Year</ion-label>
+                <ion-item>
+                  <ion-label>Year</ion-label>
+                  <ion-datetime placeholder="Year" [ngModelOptions]="{standalone: true}" displayFormat="YYYY" max="{{year}}" [(ngModel)]="years" (ngModelChange)="dateChanged($event)"></ion-datetime>
+                  <ion-select (ionChange)="yearChange($event)" *ngfor="let res of year">
+                      <ion-option>1989</ion-option>
+                      <ion-option>1990</ion-option>
+                      <ion-option>1991</ion-option>
+                      <ion-option>1992</ion-option>
+                      <ion-option>1993</ion-option>
+                      <ion-option selected="true">1994</ion-option>
+                      <ion-option>1995</ion-option>
+                      <ion-option>1996</ion-option>
+                      <ion-option>1997</ion-option>
+                      <ion-option>1998</ion-option>
+                      <ion-option>1999</ion-option>
+                    </ion-select>
+                </ion-item>
+              </ion-col>
+            </ion-row>  -->
+         
+
+          
+            <br>
+            <div style="text-align: center">
+              <button ion-button>NEXT</button>
+            </div>
+
+          </form>
+          <br><br>
+
+
+
+        </ion-card-content>
+      </ion-card>
+
+    </div>
+  </div>
+
+
+</ion-content>

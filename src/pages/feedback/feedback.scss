@@ -1,0 +1,53 @@
+page-feedback {
+    .content{
+        background: rgb(89, 143, 212); 
+    }
+    // .footer{
+    //     background: rgb(247, 109, 17); 
+    // }
+    // .toolbar{
+    //     background: rgb(247, 109, 17); 
+    // }
+
+    .cars{
+        margin-left: 40%;
+        // margin-right: 10px;
+        border-radius: 13px;
+         border-top-right-radius: 0px;
+       
+      
+         font-weight: 500;
+        background: rgb(250, 249, 245);
+        
+         width: 60%;
+        // height: 4%;
+        
+        }
+
+        .fm{
+            float: left;
+            font-size: 16px;
+            font-weight: 500;
+            word-break: break-all
+        }
+        .ft{
+            padding: 5px;
+           
+            float:right;
+            font-size: 12px;
+            font-weight: 500;
+            // color: rgb(255, 0, 140)
+        }
+.ca{
+    margin-left: 1px;
+    margin-right: 10px;
+  
+    // padding-bottom: 10%;  
+    font-size: 14px;
+    font-weight: 500;
+    background: rgb(247, 157, 54); 
+    border-radius: 13px;
+    width: 100%;
+    height: 80%;
+}
+}
